@@ -3,10 +3,10 @@ import ballerina/http;
 import wso2/choreo.sendemail as email;
 import ballerina/log;
 
-configurable github:ListenerConfig config = ?;
+configurable github:ListenerConfig config = "secret";
 
 // Email recepient address
-configurable string recipientAddress = ?;
+configurable string recipientAddress = "ammar@wso2.com";
 
 listener http:Listener httpListener = new(8090);
 listener github:Listener webhookListener =  new(config,httpListener);
